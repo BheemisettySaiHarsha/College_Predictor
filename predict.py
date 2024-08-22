@@ -22,8 +22,8 @@ def predict_college(myrank, category, gender, institute_type, predictor_df, bran
         ((predictor_df['Seat Type'] == category) if category != 'All' else True) &
         ((predictor_df['Institute'] == college) if college != 'All' else True) &
         ((predictor_df['Academic Program Name'] == branch) if branch != 'All' else True) &
-        ((predictor_df['Opening Rank'] <= myrank+1100) &
-        (predictor_df['Closing Rank'] >= myrank-1100))
+        ((predictor_df['Opening Rank'] <= myrank+450) &
+        (predictor_df['Closing Rank'] >= myrank-450))
     ]
     # Define the category order
     category_order = seat_types
